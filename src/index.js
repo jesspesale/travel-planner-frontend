@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 // compose allows us to combine middlewares into one so we can pass one argument to createStore
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import tripReducer from './reducers/tripReducer';
 
 import App from './App';
 
@@ -13,7 +14,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 // set up store, import provider to use redux
-let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(tripReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store = {store}>
