@@ -10,14 +10,14 @@ import { fetchTrips } from "../actions/fetchTrips";
 class TripsContainer extends React.Component {
 
     componentDidMount() {
-        fetchTrips()
+        this.props.fetchTrips()
     }
 
     render() {
         return (
             <div>
                 <TripForm />
-                <Trips />
+                <Trips trips={this.props.trips} />
             </div>
         )
     }
@@ -25,7 +25,7 @@ class TripsContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        // trips: state.trips
+        trips: state.trips
     }
 }
 
