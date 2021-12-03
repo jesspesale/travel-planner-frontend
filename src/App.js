@@ -7,7 +7,7 @@ import TripsContainer from './containers/TripsContainer';
 class App extends React.Component {
 
   componentDidMount() {
-    // fetchTrips()
+     
     
   }
 
