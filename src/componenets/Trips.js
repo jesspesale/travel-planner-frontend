@@ -6,10 +6,11 @@ const Trip = (props) => {
 
     return (
         <div>
-            Trips
+            Your Trips:
            {props.trips.map(trip => 
-           <li>
-               {trip.destination} from {trip.start_date} => {trip.end_date}
+           <li key={trip.id}>
+               {trip.destination} from {trip.start_date} to {trip.end_date}
+             
            </li>
            )}
         </div>
