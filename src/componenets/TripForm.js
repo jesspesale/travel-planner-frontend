@@ -20,6 +20,11 @@ class TripForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addTrip(this.state)
+        this.setState({
+            destination: "",
+            start_date: "",
+            end_date: ""            
+        })
     }
 
     render() {
@@ -36,6 +41,7 @@ class TripForm extends React.Component {
                     <br/>
                     <label>End Date</label>
                     <input type="date" value={this.state.end_date} name="end_date" onChange={this.handleChange} />
+                    <br/>
                     <br/>
                     <input type="submit"/>
                 </form>
