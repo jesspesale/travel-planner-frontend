@@ -1,7 +1,7 @@
 // render other compontnets and pass them data
 import React from "react";
 import { connect } from 'react-redux';
-
+import {Routes, Route} from "react-router-dom"
 import TripForm from "../componenets/TripForm";
 import Trips from "../componenets/Trips"
 import { fetchTrips } from "../actions/fetchTrips";
@@ -16,8 +16,14 @@ class TripsContainer extends React.Component {
     render() {
         return (
             <div>
-                <TripForm /> <br/><br/>
-                <Trips trips={this.props.trips} />
+        {/* // when the route matches the path render this component */}
+            <Routes >
+                    <Route path="/trips/new" element={<TripForm/>} />
+                        
+                    <Route path="/trips" element={<Trips trips={this.props.trips} />}  />
+            </Routes>
+                 <br/><br/>
+                {/* <Trips  /> */}
             </div>
         )
     }

@@ -3,13 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import TripsContainer from './containers/TripsContainer';
 
-
 class App extends React.Component {
-
-  componentDidMount() {
-     
-    
-  }
 
     render() {
       return (
@@ -21,16 +15,9 @@ class App extends React.Component {
 
   }
 
-  // const mapStateToProps = (state) => {
-  //   return {
-  //     trips: state.trips
-  //   }
-  // }
-
 export default connect()(App);
 // connect connects the redux store to this component
 // calls dipatch for you on the return value of fetchTrips (the action object)
-
 
 
 // fix seeing all packing items or just pakcing items associated wiht a trip at Part 3 32 minutes
