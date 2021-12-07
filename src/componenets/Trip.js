@@ -1,21 +1,21 @@
 import React from "react";
-import {useParams} from "react-router-dom"
 
 const Trip = (props) => {
-    console.log(props.trips)
 
-
-     let params = useParams
-     console.log(params)
-
+     let trip = props.trips[props.match.params.id - 1]
+    console.log(trip)
+    if (trip) {
     return (
-        <li>
-            {/* {props.trip.destination}     Dates: {props.trip.start_date} to {props.trip.end_date} */}
-            Trip 
+        <h4>
+            Desitnation: {trip.destination }
             <br/>
-            <br/>
-        </li>
-    )
+            Dates: {trip.start_date} to {trip.end_date}
+        </h4>
+        )
+    }
+    else {
+        return null
+    }
 }
 
 export default Trip

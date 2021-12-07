@@ -20,8 +20,9 @@ class TripsContainer extends React.Component {
         {/* // when the route matches the path render this component */}
             <h1>Trips Container</h1>
                     <Route path="/trips/new" component={TripForm} />       
+                    <Route path="/trips/:id" render={(routerProps) => <Trip {...routerProps} trips={this.props.trips} />} />
+                    {/*  not rendered exactly, will be conditionally rendered based on the URL */}
                     <Route exact path="/trips" render={() => <Trips trips={this.props.trips} /> } />
-                    {/* <Route path="/trips/:id" element={<Trip trips={this.props.trips} />} /> */}
 
                  <br/><br/>
                 {/* <Trips trips={this.props.trips} /> */}
