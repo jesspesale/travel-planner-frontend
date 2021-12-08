@@ -1,22 +1,21 @@
 import React from "react";
-import { Redirect } from "react-router"; 
+import PackingItemContainer from "../containers/PackingItemContainer";
 
 const Trip = (props) => {
 
     let trip = props.trips[props.match.params.id - 1]
 
-    if (trip) {
-        return (
-            <h4>
-                Desitnation: {trip.destination }
-                <br/>
-                Dates: {trip.start_date} to {trip.end_date}
-            </h4>
-            )
-        }
-    else {
-            return null
-        }
+
+    return (
+        <div>
+            <h3>
+                Destination: {trip ? trip.destination : null}
+                <br/><br/>
+                From {trip ? trip.start_date : null} to {trip ? trip.end_date : null}
+            </h3>
+             <PackingItemContainer trip={trip}/>
+        </div>
+    )
 
 }
 
