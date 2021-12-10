@@ -2,7 +2,7 @@ import React from "react";
 
 // functional component can receive information from props from PackingContainer
 const PackingItems = (props) => {
-    console.log(props)
+    // console.log(props)
     // if(props.packing_list) {
             return (
                 <div>
