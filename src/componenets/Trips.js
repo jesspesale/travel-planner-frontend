@@ -7,7 +7,6 @@ import Trip from "./Trip";
 
 const Trips = (props) => {
     // console.log(props)
-    // debugger
 
   return (
     <div>

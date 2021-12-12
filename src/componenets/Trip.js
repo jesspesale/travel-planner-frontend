@@ -3,9 +3,8 @@ import PackingItemContainer from "../containers/PackingItemContainer";
 
 const Trip = (props) => {
 
-    let trip = props.trips[props.match.params.id - 1]
-    console.log(props.trips)
-    // let trip2 = props.trips.filter(trip => trip.id === props.match.params.id)
+    // let trip = props.trips[props.match.params.id - 1]
+    let trip = props.trips.filter(trip => trip.id == props.match.params.id)[0]
 
     return (
         <div>
