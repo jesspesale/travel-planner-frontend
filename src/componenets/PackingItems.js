@@ -1,15 +1,23 @@
 import React from "react";
+import {connect} from "react-redux"
+import {deleteItem} from "../actions/deleteItem"
 
 // functional component can receive information from props from PackingContainer
 const PackingItems = (props) => {
 
+    const handleDelete = (item) => {
+        // debugger
+        props.deleteItem(item.id, item.trip_id)
+    }
+
             return (
                 <div>
                    {props.packing_items && props.packing_items.map(item => 
-                        <li key={item.id}>{item.item}</li>
+                            <li key={item.id}>{item.item}  <button onClick={() => handleDelete(item)}>x</button></li>
+                        
                         )}
                 </div>
             )
 }
 
-export default PackingItems
+export default connect(null, {deleteItem})(PackingItems)

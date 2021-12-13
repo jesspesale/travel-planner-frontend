@@ -10,7 +10,6 @@ export const addPackingItem = (item, trip_id) => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        // .then(trip => console.log(trip))
         .then(trip => dispatch({type: "ADD_PACKINGITEM", payload: trip}))
     }
 }

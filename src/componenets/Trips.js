@@ -1,12 +1,10 @@
 import React from "react";
-import {Route, Link} from 'react-router-dom'
-import Trip from "./Trip";
+import {Link} from 'react-router-dom'
 
 // functional component bc just showing a list of trips
 // just returns JSX
 
 const Trips = (props) => {
-    // console.log(props)
 
   return (
     <div>
