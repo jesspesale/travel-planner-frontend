@@ -36,6 +36,20 @@ export default function tripReducer(state = {trips: []}, action) {
                 ...state,
                 trips: trip2
             }
+        case "EDIT_ACCOUNT":
+            let trip3 = state.trips.map(trip => {
+                if (trip.id === action.payload.id){
+                    return action.payload
+                }
+                else {
+                    return trip
+                }
+            })
+            // debugger
+            return {
+                ...state,
+                trips: trip3
+            }
         default:
             return state
     }
