@@ -1,17 +1,18 @@
 import React from "react";
 import {connect} from "react-redux"
 import { addTrip} from "../actions/addTrip";
+import { Redirect } from 'react-router';
 // class comp. has local state to hold form values
 class TripForm extends React.Component {
 
     state = {
         destination: "",
         start_date: "",
-        end_date: ""
+        end_date: "",
+        redirect: false
     }
 
     handleChange = (event) => {
-        // console.log(event.target.value)
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -23,11 +24,18 @@ class TripForm extends React.Component {
         this.setState({
             destination: "",
             start_date: "",
-            end_date: ""            
+            end_date: ""  ,
+            redirect: true          
         })
     }
 
     render() {
+        const { redirect } = this.state;
+
+        if (redirect) {
+            return <Redirect to='/trips/'/>;
+        }
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
