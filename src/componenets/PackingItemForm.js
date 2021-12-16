@@ -16,17 +16,14 @@ class PackingItemForm extends React.Component {
     }
 
     handleSubmit = (event) => {
-        // console.log(this.props.packing_items[0].trip_id)
         event.preventDefault()
-        this.props.addPackingItem(this.state, this.props.packing_items[0].trip_id)
+        this.props.addPackingItem(this.state, this.props.tripId)
         this.setState({
             item: ""
         })
     }
 
     render(){
-        // console.log(this.props)
-        // debugger
         
         return (
             <div>

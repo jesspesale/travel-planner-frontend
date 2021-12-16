@@ -1,5 +1,5 @@
 export const addPackingItem = (item, trip_id) => {
-
+    // debugger
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/trips/${trip_id}/packing_items`, {
             headers: {
