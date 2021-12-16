@@ -7,6 +7,7 @@ import Trip from "../componenets/Trip";
 import Trips from "../componenets/Trips"
 import TripEdit from "../componenets/TripEdit";
 import { fetchTrips } from "../actions/fetchTrips";
+import Home from "../componenets/Home";
 
 
 class TripsContainer extends React.Component {
@@ -16,14 +17,16 @@ class TripsContainer extends React.Component {
     }
     
     render() {
-        console.log(this.props)
 
         return (
             <div>
         {/* // when the route matches the path render this component */}
-            <h1>Trips Container</h1>
+
+            {/* <h4>Create a new trip:</h4>
+            <TripForm /> */}
             <Switch>
 {/* switch will choose the first route that mathces that path */}
+                <Route exact path="/" component={Home} /> 
                 <Route path="/trips/new" component={TripForm} />       
                 <Route path='/trips/:id' render={(routerProps) => <Trip {...routerProps} trips={this.props.trips} />} />
       {/*  not rendered exactly, will be conditionally rendered based on the URL */}

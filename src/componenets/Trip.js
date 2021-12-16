@@ -19,9 +19,7 @@ const Trip = (props) => {
             </h3>
             <PackingItemContainer trip={trip}/>
             <br/><br/><br/>
-            <h2>Edit your trip Information:</h2>
-            <Link to={trip ? `/trips/${trip.id}/edit` : `/trips`}>Edit Your Trip</Link>
-            {/* <Link to={`/trips/${trip.id}/edit`}>Edit {trip.destination}</Link> */}
+            <h4>Edit your trip Information:</h4>
             <TripEdit trip={trip}/>
         </div>
     )
