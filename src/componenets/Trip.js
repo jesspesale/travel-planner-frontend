@@ -1,15 +1,12 @@
 import React from "react";
 import PackingItemContainer from "../containers/PackingItemContainer";
 import TripEdit from "./TripEdit";
-import {Link} from 'react-router-dom'
-
 
 const Trip = (props) => {
 
-    // console.log(props)
+    console.log(props)
     let trip = props.trips.filter(trip => trip.id == props.match.params.id)[0]
-    // console.log(trip)
-    // if (trip) {
+
     return (
         <div>
             <h3>
@@ -23,8 +20,6 @@ const Trip = (props) => {
             <TripEdit trip={trip}/>
         </div>
     )
-    // }
-
 
 }
 

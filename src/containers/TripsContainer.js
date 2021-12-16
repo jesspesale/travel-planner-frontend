@@ -20,10 +20,6 @@ class TripsContainer extends React.Component {
 
         return (
             <div>
-        {/* // when the route matches the path render this component */}
-
-            {/* <h4>Create a new trip:</h4>
-            <TripForm /> */}
             <Switch>
 {/* switch will choose the first route that mathces that path */}
                 <Route exact path="/" component={Home} /> 

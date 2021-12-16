@@ -9,8 +9,7 @@ class TripEdit extends React.Component {
     state = {
         destination: "",
         start_date: "",
-        end_date: "",
-        redirect: false   
+        end_date: "" 
     }
 
     handleChange = (event) => {
@@ -21,22 +20,18 @@ class TripEdit extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        
         let trip = {...this.state, id: this.props.trip.id}
         this.props.editTrip(trip)
         this.setState({
             destination: "",
             start_date: "",
-            end_date: "",
-            redirect: true               
+            end_date: ""              
         })
     }
 
     render() {
-        const { redirect } = this.state;
-        // console.log(this.props)
-        if (redirect) {
-            return <Redirect to={`/trips/${this.props.trip.id}`}/>;
-        }
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

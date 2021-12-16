@@ -1,12 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
-
 // functional component bc just showing a list of trips
 // just returns JSX
 
 const Trips = (props) => {
-    // console.log(props)
+    console.log(props)
 
   return (
     <div>
@@ -17,9 +16,7 @@ const Trips = (props) => {
           <Link to={`/trips/${trip.id}`}>{trip.destination}</Link>
         </li> )}
     </div>
-
   )
-
 }
 
 export default Trips
