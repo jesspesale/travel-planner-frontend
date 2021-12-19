@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom'
+import { connect } from "react-redux";
+import { deleteTrip } from "../actions/deleteTrip";
 
 // functional component bc just showing a list of trips
 // just returns JSX
@@ -7,8 +9,10 @@ import {Link} from 'react-router-dom'
 const Trips = (props) => {
     // console.log(props)
 
-    const handleDelete = () => {
-
+    const handleDelete = (tripId) => {
+      console.log(tripId)
+      props.deleteTrip(tripId)
+      
     }
 
   return (
@@ -18,11 +22,11 @@ const Trips = (props) => {
       {props.trips.map(trip =>
         <li key={trip.id}>
           <Link to={`/trips/${trip.id}`}>{trip.destination}</Link>
-          <button onClick={handleDelete} style={{ marginLeft: '.5rem'} } >X </button>
+          <button onClick={() => handleDelete(trip.id)} style={{ marginLeft: '.5rem'} } >X </button>
         </li> )}
     </div>
   )
 }
 
-export default Trips
+export default connect(null, {deleteTrip})(Trips)
 

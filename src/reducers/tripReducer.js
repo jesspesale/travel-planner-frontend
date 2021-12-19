@@ -10,6 +10,12 @@ export default function tripReducer(state = {trips: []}, action) {
                 ...state,
                 trips: [...state.trips, action.payload]
             }
+        case "DELETE_TRIP":
+            // debugger
+            return {
+                ...state,
+                trips: action.payload
+            }
         case "ADD_PACKINGITEM":
                 let trips = state.trips.map(trip => {
                     if (trip.id === action.payload.id){
