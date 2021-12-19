@@ -9,7 +9,7 @@ class TripEdit extends React.Component {
     state = {
         destination: "",
         start_date: "",
-        end_date: "" ,
+        end_date: "",
         ...this.props.trip
     }
 

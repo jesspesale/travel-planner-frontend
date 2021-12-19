@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 // just returns JSX
 
 const Trips = (props) => {
-    console.log(props)
+    // console.log(props)
 
   return (
     <div>
