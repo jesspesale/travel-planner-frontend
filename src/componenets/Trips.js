@@ -7,6 +7,10 @@ import {Link} from 'react-router-dom'
 const Trips = (props) => {
     // console.log(props)
 
+    const handleDelete = () => {
+
+    }
+
   return (
     <div>
         <br/>
@@ -14,6 +18,7 @@ const Trips = (props) => {
       {props.trips.map(trip =>
         <li key={trip.id}>
           <Link to={`/trips/${trip.id}`}>{trip.destination}</Link>
+          <button onClick={handleDelete} style={{ marginLeft: '.5rem'} } >X </button>
         </li> )}
     </div>
   )
