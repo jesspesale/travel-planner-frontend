@@ -37,7 +37,7 @@ class TripEdit extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Destination </label>
-                    <input type="text"  value={this.state.destination} name="destination" onChange={this.handleChange} />
+                    <input type="text" value={this.state.destination} name="destination" onChange={this.handleChange} />
                     <br/>
                     <br/>
                     <label>Start Date </label>
