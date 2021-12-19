@@ -25,14 +25,11 @@ class TripsContainer extends React.Component {
                 <Route exact path="/" component={Home} /> 
                 <Route path="/trips/new" component={TripForm} />       
                 <Route path='/trips/:id' render={(routerProps) => <Trip {...routerProps} trips={this.props.trips} />} />
-      {/*  not rendered exactly, will be conditionally rendered based on the URL */}
+{/*  not rendered exactly, will be conditionally rendered based on the URL */}
                 <Route path='/trips' render={(routerProps) => <Trips {...routerProps} trips={this.props.trips} /> } />
                 <Route path="/trips/:id/edit"  component={TripEdit}/>
             </Switch>
-
-
                  <br/><br/>
-                {/* <Trips trips={this.props.trips} /> */}
             </div>
         )
     }

@@ -12,7 +12,6 @@ const Trip = (props) => {
     let trip = props.trips.filter(trip => trip.id == props.match.params.id)[0]
 
     const handleDelete = (trip) => {
-        console.log(trip)
         props.deleteTrip(trip.id)
     }
 

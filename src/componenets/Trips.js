@@ -7,12 +7,9 @@ import { deleteTrip } from "../actions/deleteTrip";
 // just returns JSX
 
 const Trips = (props) => {
-    // console.log(props)
 
     const handleDelete = (tripId) => {
-      console.log(tripId)
       props.deleteTrip(tripId)
-      
     }
 
   return (

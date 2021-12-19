@@ -1,5 +1,5 @@
 export const editTrip = (trip) => {
-    //   debugger
+    
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/trips/${trip.id}`, { 
             headers: {

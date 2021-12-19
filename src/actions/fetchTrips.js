@@ -1,5 +1,3 @@
-
-
 export function fetchTrips() {
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/trips')
@@ -9,8 +7,5 @@ export function fetchTrips() {
            payload: trips      
         }))
     }
-
- 
-
 }
 

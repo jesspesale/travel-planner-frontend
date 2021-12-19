@@ -24,7 +24,6 @@ class PackingItemForm extends React.Component {
     }
 
     render(){
-        
         return (
             <div>
                 Add items to pack:

@@ -11,7 +11,6 @@ export default function tripReducer(state = {trips: []}, action) {
                 trips: [...state.trips, action.payload]
             }
         case "DELETE_TRIP":
-            // debugger
             return {
                 ...state,
                 trips: action.payload
