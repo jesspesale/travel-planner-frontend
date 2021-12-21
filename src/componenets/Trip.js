@@ -5,6 +5,7 @@ import { deleteTrip } from "../actions/deleteTrip";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import {Link} from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 const Trip = (props) => {
 

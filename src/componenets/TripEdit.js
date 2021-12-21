@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from "react-redux"
 import {editTrip} from "../actions/editTrip";
-import {Redirect} from "react-router"
 
 // class comp. has local state to hold form values
 class TripEdit extends React.Component {
@@ -32,7 +31,6 @@ class TripEdit extends React.Component {
     }
 
     render() {
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
