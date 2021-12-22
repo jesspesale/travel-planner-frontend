@@ -31,8 +31,7 @@ class PackingItemForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     <input type="text" name="item" value={this.state.item} placeholder="what to pack" onChange={this.handleChange} ></input>
-                    {/* <input type="submit" /> */}
-                    <Button className="addButton" type="submit" variant="outline-secondary">Add</Button>
+                    <Button className="addButton" type="submit" size="sm" variant="outline-secondary">Add</Button>
                 </form>
             </div>
         )

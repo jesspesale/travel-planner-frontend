@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import {deleteItem} from "../actions/deleteItem"
+import { Button } from 'react-bootstrap';
 
 // functional component can receive information from props from PackingContainer
 const PackingItems = (props) => {
@@ -13,7 +14,7 @@ const PackingItems = (props) => {
         <div>
             {props.packing_items && props.packing_items.map(item => 
                     <li className="answer" key={item.id}>{item.item}
-                    <button className="deleteButton" onClick={() => handleDelete(item)} style={{ marginLeft: '.5rem'} } >x</button>
+                    <Button style={{ marginLeft: '.5rem'}} size="sm" onClick={() => handleDelete(item)} type="submit" variant="outline-secondary">x</Button>
                     </li>
                 )}
         </div>
