@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux"
 import {addPackingItem} from "../actions/addPackingItem"
+import { Button } from 'react-bootstrap';
 
 class PackingItemForm extends React.Component {
 // class to keep track of values of the form in state
@@ -30,7 +31,8 @@ class PackingItemForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     <input type="text" name="item" value={this.state.item} placeholder="what to pack" onChange={this.handleChange} ></input>
-                    <input type="submit" />
+                    {/* <input type="submit" /> */}
+                    <Button className="addButton" type="submit" variant="outline-secondary">Add</Button>
                 </form>
             </div>
         )

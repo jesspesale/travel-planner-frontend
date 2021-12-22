@@ -9,7 +9,7 @@ class PackingItemContainer extends React.Component {
         return (
             <div>
                 <br/><br/>
-                <h2>Packing List:</h2>
+                <h2 className="underlined" >Packing List:</h2>
                 <PackingItems packing_items={this.props.trip && this.props.trip.packing_items} />
                 <br/><br/>
                 <PackingItemForm packing_items={this.props.trip && this.props.trip.packing_items} tripId={this.props.trip && this.props.trip.id} />

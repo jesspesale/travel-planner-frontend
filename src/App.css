@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Bubblegum Sans";
 }
 
 .App-logo {
@@ -35,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title {
+  font-size: 30px;
+  text-decoration: underline;
+  
+}
+
+.answer {
+  font-size: 20px;
+  color: #B0B0B0;
+}
+
+.deleteButton {
+  border-radius: 12px;
+}
+
+.addButton {
+  font-size: x-small;
+  border-radius: 10px;
 }
