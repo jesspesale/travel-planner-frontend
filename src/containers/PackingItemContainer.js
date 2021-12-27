@@ -10,9 +10,9 @@ class PackingItemContainer extends React.Component {
             <div>
                 <br/><br/>
                 <h2 className="underlined" >Packing List:</h2>
-                <PackingItems packing_items={this.props.trip && this.props.trip.packing_items} />
+                <PackingItems packingItems={this.props.trip && this.props.trip.packing_items} />
                 <br/><br/>
-                <PackingItemForm packing_items={this.props.trip && this.props.trip.packing_items} tripId={this.props.trip && this.props.trip.id} />
+                <PackingItemForm packingItems={this.props.trip && this.props.trip.packing_items} tripId={this.props.trip && this.props.trip.id} />
             </div>
         )
     }

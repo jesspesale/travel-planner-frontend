@@ -5,6 +5,7 @@ import { deleteTrip } from "../actions/deleteTrip";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import {Link} from 'react-router-dom'
+import ItineraryItemContainer from "../containers/ItineraryItemContainer";
 
 
 const Trip = (props) => {
@@ -41,7 +42,9 @@ const Trip = (props) => {
             
             <PackingItemContainer trip={trip}/>
             <br/><br/>
-            <Link to={`/trips/`} onClick={trip ? () => handleDelete(trip) : null} >Delete Trip</Link>
+            <ItineraryItemContainer trip={trip}/>
+            <br/><br/>
+            <Link to={`/trips/`} onClick={trip ? () => handleDelete(trip) : null} >Delete This Trip</Link>
 
             <br/><br/><br/>
             <h4>Edit your trip Information:</h4>

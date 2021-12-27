@@ -1,17 +1,18 @@
 import React from "react"
-// import PackingItemForm from "../componenets/PackingItemForm"
+import ItineraryForm from "../componenets/ItineraryItems/ItineraryForm"
 import ItineraryItems from "../componenets/ItineraryItems/ItineraryItems"
 
 class ItineraryItemContainer extends React.Component {
-// class component bc containers have state and need other functions
-    
+  
     render() {
+        // console.log(this.props)
         return (
             <div>
                 <br/><br/>
-                <h2 className="underlined" >What to do:</h2>
-
-                {/* <PackingItems packing_items={this.props.trip && this.props.trip.packing_items} /> */}
+                <h2 className="underlined" >Things to do:</h2>
+                <ItineraryItems itineraryItems = {this.props.trip && this.props.trip.itinerary_items} />
+                <br/><br/>
+                <ItineraryForm/>
                 <br/><br/>
             </div>
         )

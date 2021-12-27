@@ -7,10 +7,12 @@ const ItineraryItems = (props) => {
     // const handleDelete = (item) => {
     //     props.deleteItem(item.id, item.trip_id)
     // }
-
+    console.log(props)
     return (
         <div>
-                Itinerary Items
+                {props.itineraryItems && props.itineraryItems.map(item => 
+                     <li>{item.description}</li>
+                )}
         </div>
     )
 }
