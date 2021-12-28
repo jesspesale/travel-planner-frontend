@@ -2,6 +2,7 @@ import React from "react";
 // import {addItineraryItem} from "../actions/addItineraryItem"
 import {connect} from "react-redux"
 import { Button } from 'react-bootstrap';
+import { addItineraryItem } from "../../actions/addItineraryItem";
 
 class ItineraryForm extends React.Component {
 
@@ -18,10 +19,12 @@ class ItineraryForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        
+        // addItineraryItem(event.target.value, this.props.tripId)
+
     }
 
     render() {
+        console.log(this.props)
         return (
             <div>
                 Add something else to your itinerary:

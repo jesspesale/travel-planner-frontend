@@ -7,7 +7,7 @@ const ItineraryItems = (props) => {
 
     const handleDelete = (item) => {
         // props.deleteItineraryItem(item.id, item.trip_id)
-        console.log(item)
+        // console.log(item)
     }
     console.log(props)
     return (

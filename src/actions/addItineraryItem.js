@@ -1,7 +1,7 @@
-export const addPackingItem = (item, tripId) => {
+export const addItineraryItem = (item, tripId) => {
 
-    return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/trips/${tripId}/packing_items`, {
+    return(dispatch) => {
+        fetch(`http://localhost:3000/api/v1/trips/${tripId}/itinerary_items`, {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
@@ -10,7 +10,7 @@ export const addPackingItem = (item, tripId) => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        .then(trip => dispatch({type: "ADD_PACKINGITEM", payload: trip}))
+        .then(dispatch({type: "ADD_ITINERARY_ITEM", payload: item}))
+        
     }
 }
-
