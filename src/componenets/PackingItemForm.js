@@ -27,9 +27,9 @@ class PackingItemForm extends React.Component {
     render(){
         return (
             <div>
-                Add items to pack:
+                Add more items to pack:
+                <br/>
                 <form onSubmit={this.handleSubmit}>
-                    <label></label>
                     <input type="text" name="item" value={this.state.item} placeholder="what to pack" onChange={this.handleChange} ></input>
                     <Button className="addButton" type="submit" size="sm" variant="outline-secondary">Add</Button>
                 </form>

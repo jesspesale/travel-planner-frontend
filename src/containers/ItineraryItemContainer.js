@@ -19,13 +19,18 @@ class ItineraryItemContainer extends React.Component {
         }
     }
 
-
     render() {
         return (
             <div>
                 {this.checkTrip()}
             </div>
         )
+    }
+}
+
+export default ItineraryItemContainer
+
+
         // return (
         //     <div>
         //         <br/><br/>
@@ -36,7 +41,3 @@ class ItineraryItemContainer extends React.Component {
         //         <br/><br/>
         //     </div>
         // )
-    }
-}
-
-export default ItineraryItemContainer
