@@ -1,35 +1,33 @@
 import React from "react";
-// import {addItineraryItem} from "../actions/addItineraryItem"
 import {connect} from "react-redux"
-import { Button } from 'react-bootstrap';
 import { addItineraryItem } from "../../actions/addItineraryItem";
+import { Button } from 'react-bootstrap';
 
 class ItineraryForm extends React.Component {
 
     state = {
-        itineraryItem: ""
+        description: ""
     }
 
     handleChange = (event) => {
         this.setState({
-            itineraryItem: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
 
     handleSubmit = (event) => {
         event.preventDefault()
-        // addItineraryItem(event.target.value, this.props.tripId)
+        this.props.addItineraryItem(this.state, this.props.tripId)
 
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 Add something else to your itinerary:
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="itineraryItem" value={this.state.itineraryItem} placeholder="what to do" onChange={this.handleChange}></input>
+                    <input type="text" name="description" value={this.state.description} placeholder="what to do" onChange={this.handleChange}></input>
                     <Button className="addButton" type="submit" size="sm" variant="outline-secondary">Add</Button>
                 </form>
             </div>
@@ -38,7 +36,7 @@ class ItineraryForm extends React.Component {
 
 }
 
-export default connect()(ItineraryForm)
+export default connect(null, {addItineraryItem})(ItineraryForm)
 
 
 

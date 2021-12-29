@@ -3,17 +3,14 @@ import PackingItemContainer from "../containers/PackingItemContainer";
 import TripEdit from "./TripEdit";
 import { deleteTrip } from "../actions/deleteTrip";
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
+// import { Redirect } from "react-router";
 import {Link} from 'react-router-dom'
 import ItineraryItemContainer from "../containers/ItineraryItemContainer";
 
 
 const Trip = (props) => {
-
     // console.log(props)
     let trip = props.trips.filter(trip => trip.id == props.match.params.id)[0]
-    // let startDate = trip.start_date
-    // let endDate = trip.end_date
     const handleDelete = (trip) => {
         props.deleteTrip(trip.id)
     }

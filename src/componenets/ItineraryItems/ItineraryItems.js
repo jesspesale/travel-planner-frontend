@@ -9,7 +9,7 @@ const ItineraryItems = (props) => {
         // props.deleteItineraryItem(item.id, item.trip_id)
         // console.log(item)
     }
-    console.log(props)
+
     return (
         <div>
                 {props.itineraryItems.map(item => 
