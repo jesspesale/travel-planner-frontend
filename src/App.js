@@ -8,6 +8,7 @@ import "bootswatch/dist/quartz/bootstrap.min.css";
 class App extends React.Component {
 
     render() {
+ 
       return (
         <div className="App">
           <NavBar />
@@ -16,7 +17,6 @@ class App extends React.Component {
         </div>
       );
     }
-
   }
 
 export default connect()(App);
