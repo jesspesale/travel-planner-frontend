@@ -6,7 +6,5 @@ export const deleteItem = (item_id, trip_id) => {
         })
         .then(resp => resp.json())
         .then(trip => dispatch({type: "DELETE_PACKINGITEM", payload: trip}))
-
     }
-
 }

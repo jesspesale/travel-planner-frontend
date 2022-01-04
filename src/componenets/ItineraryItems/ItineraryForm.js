@@ -35,28 +35,6 @@ class ItineraryForm extends React.Component {
             </div>
         )
     }
-
 }
 
 export default connect(null, {addItineraryItem})(ItineraryForm)
-
-
-
-//     handleSubmit = (event) => {
-//         event.preventDefault()
-//         this.props.addPackingItem(this.state, this.props.tripId)
-//         this.setState({
-//             item: ""
-//         })
-//     }
-
-//                 <form onSubmit={this.handleSubmit}>
-//                     <label></label>
-//                     <input type="text" name="item" value={this.state.item} placeholder="what to pack" onChange={this.handleChange} ></input>
-//                     <Button className="addButton" type="submit" size="sm" variant="outline-secondary">Add</Button>
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
-// export default connect(null, {addPackingItem})(PackingItemForm)
