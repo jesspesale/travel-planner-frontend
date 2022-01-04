@@ -10,6 +10,6 @@ export const addItineraryItem = (item, tripId) => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        .then(trip => dispatch({type: "ADD_ITINERARYITEM", id: tripId, payload: trip}))
+        .then(trip => dispatch({type: "ADD_ITINERARY_ITEM", id: tripId, payload: trip}))
     }
 }

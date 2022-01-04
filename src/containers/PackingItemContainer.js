@@ -1,6 +1,6 @@
 import React from "react"
-import PackingItemForm from "../componenets/PackingItemForm"
-import PackingItems from "../componenets/PackingItems"
+import PackingItemForm from "../componenets/PackingItems/PackingItemForm"
+import PackingItems from "../componenets/PackingItems/PackingItems"
 
 class PackingItemContainer extends React.Component {
 // class component bc containers have state and need other functions
