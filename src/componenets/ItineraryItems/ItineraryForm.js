@@ -19,7 +19,9 @@ class ItineraryForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addItineraryItem(this.state, this.props.tripId)
-
+        this.setState({
+            description: ""
+        })
     }
 
     render() {

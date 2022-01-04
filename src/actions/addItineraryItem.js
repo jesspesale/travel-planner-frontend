@@ -1,6 +1,5 @@
 export const addItineraryItem = (item, tripId) => {
-    console.log(item)
-    console.log(tripId)
+
     return(dispatch) => {
         fetch(`http://localhost:3000/api/v1/trips/${tripId}/itinerary_items`, {
             headers: {
@@ -11,6 +10,6 @@ export const addItineraryItem = (item, tripId) => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        .then(trip => dispatch({type: "ADD_ITINERARYITEM", payload: trip}))
+        .then(trip => dispatch({type: "ADD_ITINERARYITEM", id: tripId, payload: trip}))
     }
 }
