@@ -16,7 +16,7 @@ export default function tripReducer(state = {trips: []}, action) {
                 trips: action.payload
             }
         case "EDIT_TRIP":
-            let trip3 = state.trips.map(trip => {
+            let trips = state.trips.map(trip => {
                 if (trip.id === action.payload.id){
                     return action.payload
                 }
@@ -26,10 +26,10 @@ export default function tripReducer(state = {trips: []}, action) {
             })
             return {
                 ...state,
-                trips: trip3
+                trips: trips
             }
         case "ADD_PACKINGITEM":
-            let trips = state.trips.map(trip => {
+            let trips1 = state.trips.map(trip => {
                 if (trip.id === action.payload.id){
                     return action.payload
                 }
@@ -39,10 +39,10 @@ export default function tripReducer(state = {trips: []}, action) {
             })
         return {
             ...state,
-            trips: trips
+            trips: trips1
         }
         case "DELETE_PACKINGITEM":
-            let trip2 = state.trips.map(trip => {
+            let trips2 = state.trips.map(trip => {
                 if (trip.id === action.payload.id){
                     return action.payload
                 }
@@ -52,10 +52,10 @@ export default function tripReducer(state = {trips: []}, action) {
             })
             return {
                 ...state,
-                trips: trip2
+                trips: trips2
             }
-        case "ADD_ITINERARYITEM":
-        let newTrips = state.trips.map(trip => {
+        case "ADD_ITINERARY_ITEM":
+        let trips3 = state.trips.map(trip => {
             if(trip.id === action.payload.id){
                 return action.payload
             }
@@ -65,7 +65,22 @@ export default function tripReducer(state = {trips: []}, action) {
         })
         return {
             ...state,
-             trips: newTrips
+             trips: trips3
+        }
+        case "DELETE_ITINERARY_ITEM":
+            console.log(action.payload)
+            // debugger
+        let trips4 = state.trips.map(trip => {
+            if(trip.id === action.payload.id){
+                return action.payload
+            }
+            else {
+                return trip
+            }
+        })
+        return {
+            ...state,
+            trips: trips4
         }
         default:
             return state

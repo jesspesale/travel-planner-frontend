@@ -1,13 +1,13 @@
 import React from "react";
 import {connect} from "react-redux"
 import { Button } from 'react-bootstrap';
+import {deleteItineraryItem} from "../../actions/deleteItineraryItem"
 
 // functional component can receive information from props from PackingContainer
 const ItineraryItems = (props) => {
 
     const handleDelete = (item) => {
-        // props.deleteItineraryItem(item.id, item.trip_id)
-        // console.log(item)
+        props.deleteItineraryItem(item.id, item.trip_id)
     }
 
     return (
@@ -25,4 +25,4 @@ const ItineraryItems = (props) => {
     )
 }
 
-export default connect()(ItineraryItems)
+export default connect(null, {deleteItineraryItem})(ItineraryItems)
