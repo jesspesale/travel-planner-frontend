@@ -15,6 +15,3 @@ export const addTrip = (trip) => {
 }
 
 export default addTrip
-// thunk allows us bring dispatch into the action creator
-// dispatch is called from inside there and sends infor to our 
-// reducer bc of the connect function

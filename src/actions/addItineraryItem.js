@@ -1,5 +1,5 @@
 export const addItineraryItem = (item, tripId) => {
-    // console.log("Add item")
+
     return(dispatch) => {
         fetch(`http://localhost:3000/api/v1/trips/${tripId}/itinerary_items`, {
             headers: {

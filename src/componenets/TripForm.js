@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import { addTrip} from "../actions/addTrip";
 import { Redirect } from 'react-router';
 import { Button } from 'react-bootstrap';
+
 // class comp. has local state to hold form values
 class TripForm extends React.Component {
 
@@ -41,19 +42,31 @@ class TripForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Destination: </label>
-                    <input style={{ marginLeft: '.5rem'} } type="text" value={this.state.destination} name="destination" onChange={this.handleChange} />
-                    <br/>
-                    <br/>
+                    <input  style={{ marginLeft: '.5rem'} } 
+                            type="text" value={this.state.destination} 
+                            name="destination" 
+                            onChange={this.handleChange} 
+                    />
+                    <br/> <br/>
                     <label>Start Date: </label>
-                    <input style={{ marginLeft: '.5rem'} } type="date" value={this.state.start_date} name="start_date" onChange={this.handleChange} />
-                    <br />
-                    <br/>
+                    <input  style={{ marginLeft: '.5rem'} } 
+                            type="date" value={this.state.start_date} 
+                            name="start_date" 
+                            onChange={this.handleChange} 
+                    />
+                    <br/> <br/>
                     <label>End Date:</label>
-                    <input style={{ marginLeft: '.5rem'} } type="date" value={this.state.end_date} name="end_date" onChange={this.handleChange} />
+                    <input  style={{ marginLeft: '.5rem'} } 
+                            type="date" 
+                            value={this.state.end_date} 
+                            name="end_date" 
+                            onChange={this.handleChange} />
                     <br/>
                     <br/>
-                    <Button style={{ marginLeft: '5rem'} }type="submit" variant="outline-secondary">Add Trip</Button>
-                    {/* <input type="submit"/> */}
+                    <Button style={{ marginLeft: '5rem'} }
+                            type="submit" 
+                            variant="outline-secondary"
+                    >Add Trip</Button>
                 </form>
             </div>
         )

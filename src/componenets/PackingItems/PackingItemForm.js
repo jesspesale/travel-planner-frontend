@@ -5,7 +5,6 @@ import { Button } from 'react-bootstrap';
 
 class PackingItemForm extends React.Component {
 // class to keep track of values of the form in state
-
     state = {
         item: ""
     }
