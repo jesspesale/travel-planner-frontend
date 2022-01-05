@@ -24,8 +24,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-
-
-//We send (dispatch) an action object to our reducer and it takes that object and deiced
-//what we want to update about our current store and return a new version of that store

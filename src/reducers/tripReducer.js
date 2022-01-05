@@ -1,5 +1,5 @@
 export default function tripReducer(state = {trips: []}, action) {
-    // debugger
+
     switch (action.type) {
         case "FETCH_TRIPS":
             return {
@@ -37,10 +37,10 @@ export default function tripReducer(state = {trips: []}, action) {
                     return trip
                 }
             })
-        return {
-            ...state,
-            trips: trips1
-        }
+            return {
+                ...state,
+                trips: trips1
+            }
         case "DELETE_PACKINGITEM":
             let trips2 = state.trips.map(trip => {
                 if (trip.id === action.payload.id){
@@ -55,33 +55,31 @@ export default function tripReducer(state = {trips: []}, action) {
                 trips: trips2
             }
         case "ADD_ITINERARY_ITEM":
-        let trips3 = state.trips.map(trip => {
-            if(trip.id === action.payload.id){
-                return action.payload
+            let trips3 = state.trips.map(trip => {
+                if(trip.id === action.payload.id){
+                    return action.payload
+                }
+                else {
+                    return trip
+                }
+            })
+            return {
+                ...state,
+                trips: trips3
             }
-            else {
-                return trip
-            }
-        })
-        return {
-            ...state,
-             trips: trips3
-        }
         case "DELETE_ITINERARY_ITEM":
-            console.log(action.payload)
-            // debugger
-        let trips4 = state.trips.map(trip => {
-            if(trip.id === action.payload.id){
-                return action.payload
+            let trips4 = state.trips.map(trip => {
+                if(trip.id === action.payload.id){
+                    return action.payload
+                }
+                else {
+                    return trip
+                }
+            })
+            return {
+                ...state,
+                trips: trips4
             }
-            else {
-                return trip
-            }
-        })
-        return {
-            ...state,
-            trips: trips4
-        }
         default:
             return state
     }

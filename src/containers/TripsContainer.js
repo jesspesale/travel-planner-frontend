@@ -1,4 +1,3 @@
-// render other compontnets and pass them data
 import React from "react";
 import { connect } from 'react-redux';
 import {Route, Switch} from "react-router-dom"
@@ -9,7 +8,6 @@ import TripEdit from "../componenets/TripEdit";
 import { fetchTrips } from "../actions/fetchTrips";
 import Home from "../componenets/Home";
 
-
 class TripsContainer extends React.Component {
 
     componentDidMount() {
@@ -17,7 +15,6 @@ class TripsContainer extends React.Component {
     }
     
     render() {
-
         return (
             <div>
             <Switch>
@@ -36,7 +33,6 @@ class TripsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-
     return {
         trips: state.trips
     }
