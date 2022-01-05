@@ -9,7 +9,6 @@ import TripEdit from "../componenets/TripEdit";
 import { fetchTrips } from "../actions/fetchTrips";
 import Home from "../componenets/Home";
 
-
 class TripsContainer extends React.Component {
 
     componentDidMount() {
@@ -17,11 +16,10 @@ class TripsContainer extends React.Component {
     }
     
     render() {
-
-        return (
+        // console.log(this.props)
+        return  (
             <div>
-            <Switch>
-{/* switch will choose the first route that mathces that path */}
+            <Switch>    {/* switch will choose the first route that mathces that path */}
                 <Route exact path="/" component={Home} /> 
                 <Route path="/trips/new" component={TripForm} />       
                 <Route path='/trips/:id' render={(routerProps) => <Trip {...routerProps} trips={this.props.trips} />} />
@@ -36,9 +34,12 @@ class TripsContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-
+    // console.log(state)
     return {
         trips: state.trips
+        // trips: state.tripReducer
+        // itinerary_items: state.itineraryReducer
+
     }
 }
 

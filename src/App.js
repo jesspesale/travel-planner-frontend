@@ -8,7 +8,6 @@ import "bootswatch/dist/quartz/bootstrap.min.css";
 class App extends React.Component {
 
     render() {
- 
       return (
         <div className="App">
           <NavBar />
@@ -18,6 +17,15 @@ class App extends React.Component {
       );
     }
   }
+
+//   const mapStateToProps = (state) => {
+//     console.log(state)
+//     return {
+//         trips: state.tripReducer
+//         itinerary_items: state.itineraryReducer
+
+//     }
+// }
 
 export default connect()(App);
 // connect connects the redux store to this component

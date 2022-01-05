@@ -10,9 +10,9 @@ import ItineraryItemContainer from "../containers/ItineraryItemContainer";
 
 const Trip = (props) => {
     // console.log(props)
+    // console.log(props)
     let trip = props.trips.filter(trip => trip.id == props.match.params.id)[0]
     // When i put a === ^ nothing shows up? Why??
-    
     const handleDelete = (trip) => {
         props.deleteTrip(trip.id)
     }

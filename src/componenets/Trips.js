@@ -12,6 +12,8 @@ const Trips = (props) => {
       props.deleteTrip(tripId)
     }
 
+    // {console.log(props)}
+
   return (
     <div>
         <br/>

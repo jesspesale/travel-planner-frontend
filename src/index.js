@@ -7,18 +7,23 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import tripReducer from './reducers/tripReducer';
-// import itineraryReducer from './reducers/itineraryReducer';
+import itineraryReducer from './reducers/itineraryReducer';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// const rootReducer = combineReducers({itineraryReducer, tripReducer})
+export const rootReducer = combineReducers({itinerary_items: itineraryReducer, trips: tripReducer, packing_items: tripReducer})
 
 // set up store, import provider to use redux
-let store = createStore(tripReducer, composeEnhancers(applyMiddleware(thunk)))
-// let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
+// let store = createStore(tripReducer, composeEnhancers(applyMiddleware(thunk)))
+
+let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
+
+store.subscribe(() => {
+  console.log("store changed", store.getState())
+})
 
 ReactDOM.render(
   <Provider store = {store}>

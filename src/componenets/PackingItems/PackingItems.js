@@ -12,7 +12,8 @@ const PackingItems = (props) => {
 
     return (
         <div>
-            {props.packingItems && props.packingItems.map(item => 
+            {/* props.packingItems &&  */}
+            {props.packingItems.map(item => 
                     <li className="answer" key={item.id}>{item.item}
                     <Button style={{ marginLeft: '.5rem'}} 
                     size="sm" 
