@@ -48,3 +48,11 @@
   font-size: 20px;
   color: #B0B0B0;
 }
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: grey;
+}
