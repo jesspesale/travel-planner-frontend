@@ -19,7 +19,13 @@ const Trips = (props) => {
       {props.trips.map(trip =>
         <li key={trip.id}>
           <Link to={`/trips/${trip.id}`}>{trip.destination}</Link>
-          <Button onClick={() => handleDelete(trip.id)} style={{ marginLeft: '.5rem'}} size="sm" variant="outline-secondary">Delete</Button>
+          <Button 
+            onClick={() => handleDelete(trip.id)} 
+            style={{ marginLeft: '.5rem'}} 
+            size="sm" 
+            variant="outline-secondary">
+              Delete
+          </Button>
         </li> )}
     </div>
   )

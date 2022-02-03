@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "Bubblegum Sans";
+  font-size: 20px;
 }
 
 .App-logo {
@@ -50,9 +51,14 @@
 }
 
 .navbar{
+  margin-left: 35px;
+  margin-right: 35px;
+  
+ 
+}
+
+.navbar_outline{
+  background-color: grey;
   display: flex;
   justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: grey;
 }
