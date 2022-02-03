@@ -24,6 +24,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
+}
+
+.trip_form_header {
+  text-decoration: underline;
 }
 
 .App-link {

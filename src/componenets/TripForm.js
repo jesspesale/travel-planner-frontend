@@ -40,6 +40,9 @@ class TripForm extends React.Component {
 
         return (
             <div>
+                <br></br>
+                <h2 className="trip_form_header" >Add Your Next Trip</h2>
+                <br></br>
                 <form onSubmit={this.handleSubmit}>
                     <label>Destination: </label>
                     <input  style={{ marginLeft: '.5rem'} } 
