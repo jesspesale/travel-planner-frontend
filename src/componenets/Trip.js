@@ -21,14 +21,14 @@ const Trip = (props) => {
             let endDate = trip.end_date.split("-")
 
         return(
-            `${startDate[1]}/${startDate[2]}/${startDate[0]} -->  ${endDate[1]}/${endDate[2]}/${endDate[0]}`)
+            `${startDate[1]}/${startDate[2]}/${startDate[0]}  -->   ${endDate[1]}/${endDate[2]}/${endDate[0]}`)
         }
     }
 
     return (
         <div >
             <h3 className="title">Where you're going:</h3>
-            <div className="answer">{trip ? trip.destination : null}</div>
+            <div className="destination">{trip ? trip.destination : null}</div>
             <br/><br/>
             <h3 className="title">Travel Dates:</h3>
             <div className="answer"> {trip ? changeDate(trip) : null} </div> 
@@ -40,8 +40,8 @@ const Trip = (props) => {
             </div>
             <br/><br/>
             <Link to={`/trips/`} onClick={trip ? () => handleDelete(trip) : null} >Delete This Trip</Link>
-            <br/><br/><br/>
-            <h4>Edit your trip Information:</h4>
+            <br/><br/><br/><br></br>
+            <h4 className="title">Edit your trip Information:</h4>
             <TripEdit trip={trip}/>
         </div>
     )

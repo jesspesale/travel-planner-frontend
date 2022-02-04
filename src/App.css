@@ -51,20 +51,28 @@
 }
 
 .title {
-  font-size: 38px;
+  font-size: 40px;
   text-decoration: underline;
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
   
 }
 
 .answer {
-  font-size: 32px;
+  font-size: 30px;
   color: #B0B0B0;
   text-shadow: 1.5px 1.5px 1.5px rgb(10, 12, 12);
   text-align: center;
 }
+
+.destination{
+  font-size: 38px;
+  color: #b0b0b0;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);  
+  font-weight: bold;
+}
+
 .list_items {
-  font-size: 22px;
+  font-size: 24px;
   color: white;
 }
 
