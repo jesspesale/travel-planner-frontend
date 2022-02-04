@@ -13,8 +13,8 @@ const ItineraryItems = (props) => {
     return (
         <div>
                 {props.itineraryItems.map(item => 
-                    <li className="answer" key={item.id} >{item.description}
-                    <Button style={{ marginLeft: '.5rem'}} 
+                    <li className="list_items" key={item.id} >{item.description}
+                    <Button style={{ marginLeft: '1rem'}} 
                         size="sm" 
                         onClick={() => handleDelete(item)} 
                         type="submit" 

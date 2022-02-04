@@ -32,7 +32,8 @@ const Trip = (props) => {
             <br/><br/>
             <h3 className="title">Travel Dates:</h3>
             <div className="answer"> {trip ? changeDate(trip) : null} </div> 
-            <br/>
+            <br/><br></br>
+            <h4>Build your packing list and itinerary below:</h4>
             <div className="form_rows">
             <PackingItemContainer trip={trip} />
             <br/><br/>

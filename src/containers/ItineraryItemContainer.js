@@ -9,7 +9,7 @@ class ItineraryItemContainer extends React.Component {
             return (
                 <div>
                     <br/><br/>
-                    <h3 className="underlined" >Things to do in {this.props.trip.destination}:</h3>
+                    <h3 className="title" >Things to do in {this.props.trip.destination}:</h3>
                     <ItineraryItems itineraryItems={this.props.trip.itinerary_items} />
                     <br/><br/>
                     <ItineraryForm itineraryItems={this.props.trip.itinerary_items} tripId={this.props.trip.id}/>

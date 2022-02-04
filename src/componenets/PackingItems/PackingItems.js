@@ -13,8 +13,8 @@ const PackingItems = (props) => {
     return (
         <div>
             {props.packingItems && props.packingItems.map(item => 
-                    <li className="answer" key={item.id}>{item.item}
-                    <Button style={{ marginLeft: '.5rem'}} 
+                    <li className="list_items" key={item.id}>{item.item}
+                    <Button style={{ marginLeft: '1rem'}} 
                     size="sm" 
                     onClick={() => handleDelete(item)} 
                     type="submit" 
