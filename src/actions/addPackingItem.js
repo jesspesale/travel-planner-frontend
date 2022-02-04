@@ -1,6 +1,7 @@
 export const addPackingItem = (item, tripId) => {
     return (dispatch) => {
-        fetch(`https://travel-planner-backendd.herokuapp.com/api/v1/trips/${tripId}/packing_items`, {
+        // fetch(`https://travel-planner-backendd.herokuapp.com/api/v1/trips/${tripId}/packing_items`, {
+        fetch(`http://localhost:3000/api/v1/trips/${tripId}/packing_items`, {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
