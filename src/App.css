@@ -45,18 +45,21 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 38px;
   text-decoration: underline;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
   
 }
 
 .answer {
-  font-size: 20px;
+  font-size: 32px;
   color: #B0B0B0;
+  text-shadow: 1.5px 1.5px 1.5px rgb(10, 12, 12);
+
 }
 .list_items {
-  font-size: 20px;
-  color: #B0B0B0;
+  font-size: 22px;
+  color: white;
 }
 
 .navbar{

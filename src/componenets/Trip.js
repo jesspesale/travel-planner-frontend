@@ -27,7 +27,7 @@ const Trip = (props) => {
 
     return (
         <div >
-            <h3 className="title">Destination:</h3>
+            <h3 className="title">Where you're going:</h3>
             <div className="answer">{trip ? trip.destination : null}</div>
             <br/><br/>
             <h3 className="title">Travel Dates:</h3>
