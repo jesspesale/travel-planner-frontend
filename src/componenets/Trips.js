@@ -15,16 +15,17 @@ const Trips = (props) => {
   return (
     <div>
         <br/>
-      <h3 className="title" >All your upcoming trips:</h3>
+      <h3 className="title" >Upcoming trips:</h3>
+      <br></br>
       {props.trips.map(trip =>
-        <li key={trip.id}>
+        <li className="trips" key={trip.id} >
           <Link to={`/trips/${trip.id}`}>{trip.destination}</Link>
           <Button 
             onClick={() => handleDelete(trip.id)} 
-            style={{ marginLeft: '.5rem'}} 
+            style={{ marginLeft: '1rem'}} 
             size="sm" 
             variant="outline-secondary">
-              Delete
+              Delete Trip
           </Button>
         </li> )}
     </div>
