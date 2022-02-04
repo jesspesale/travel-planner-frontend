@@ -1,8 +1,8 @@
 export const addTrip = (trip) => {
 
     return (dispatch) => {
-// fetch('https://travel-planner-backendd.herokuapp.com/api/v1/trips', { 
-        fetch('http://localhost:3000/api/v1/trips', { 
+fetch('https://travel-planner-backendd.herokuapp.com/api/v1/trips', { 
+        // fetch('http://localhost:3000/api/v1/trips', { 
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
