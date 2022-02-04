@@ -26,16 +26,18 @@ const Trip = (props) => {
     }
 
     return (
-        <div>
+        <div >
             <h3 className="title">Destination:</h3>
             <div className="answer">{trip ? trip.destination : null}</div>
             <br/><br/>
             <h3 className="title">Travel Dates:</h3>
             <div className="answer"> {trip ? changeDate(trip) : null} </div> 
             <br/>
-            <PackingItemContainer trip={trip}/>
+            <div className="form_rows">
+            <PackingItemContainer trip={trip} />
             <br/><br/>
             <ItineraryItemContainer trip={trip}/>
+            </div>
             <br/><br/>
             <Link to={`/trips/`} onClick={trip ? () => handleDelete(trip) : null} >Delete This Trip</Link>
             <br/><br/><br/>

@@ -8,7 +8,7 @@ class PackingItemContainer extends React.Component {
     checkTrip() {
         if(this.props.trip) {
         return (
-            <div>
+            <div >
                 <br/><br/>
                 <h2 className="underlined" >Packing List:</h2>
                 <PackingItems packingItems={this.props.trip && this.props.trip.packing_items} />

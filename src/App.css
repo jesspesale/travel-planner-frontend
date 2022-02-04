@@ -67,3 +67,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.form_rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
