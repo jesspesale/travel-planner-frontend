@@ -43,6 +43,12 @@
     transform: rotate(360deg);
   }
 }
+.home_paragraph{
+  font-size: 25px;
+  text-align: center;
+  margin-left: 85px;
+  margin-right: 85px;
+}
 
 .title {
   font-size: 38px;
@@ -55,7 +61,7 @@
   font-size: 32px;
   color: #B0B0B0;
   text-shadow: 1.5px 1.5px 1.5px rgb(10, 12, 12);
-
+  text-align: center;
 }
 .list_items {
   font-size: 22px;
