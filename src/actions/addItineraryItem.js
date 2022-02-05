@@ -1,6 +1,9 @@
+// import {PROD_URL} from "../apiRoot.js"
+
 export const addItineraryItem = (item, tripId) => {
 
     return(dispatch) => {
+        // fetch(`${PROD_URL}/api/v1/trips/${tripId}/itinerary_items`, {
         fetch(`https://travel-planner-backendd.herokuapp.com/api/v1/trips/${tripId}/itinerary_items`, {
         // fetch(`http://localhost:3000/api/v1/trips/${tripId}/itinerary_items`, {
             headers: {
