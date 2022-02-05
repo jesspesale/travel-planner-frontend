@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 // anything in Provider has access to redux store
 // applyMiddleware incorporate thunk with our store
 // compose allows us to combine middlewares into one so we can pass one argument to createStore
