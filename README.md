@@ -18,7 +18,7 @@ Heres what to do:
 
 2. From the backend directory run the following commands:
     - bundle install
-    - rake db:migrade
+    - rake db:migrate
     - rails s
 
 3. Fork and clone the frontend and run the following commands in the frontend directory in your terminal:
