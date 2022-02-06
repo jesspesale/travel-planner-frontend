@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Travel Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Travel Planner! This app was created to help you keep track of any upcoming travel plans. I try to travel as much as possible, so organizng all my trip details in one place makes it easier to keep track of! You can add a trip with it's destination and dates and then create a packing list along with a list of things you would like to do while away (itinerary). This app has full CRUD functionality allowing you to create, read, update and delete any trip plus create and delete and list items you create (packing and itinerary).
 
-## Available Scripts
+This app has a Rails backend - you can find the github for it (here).
+The frontend was created with React, Redux and uses Thunk.
 
-In the project directory, you can run:
+Live Site: https://travel-plannerr.netlify.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to run the app:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+There are 2 repos you need to run this app - backend and frontend.
 
-### `npm test`
+Heres what to do:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fork and clone the backend repo from this link: https://github.com/jesspesale/travel-planner-backendd
 
-### `npm run build`
+2. From the backend directory run the following commands:
+    - bundle install
+    - rake db:migrade
+    - rails s
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Fork and clone the frontend and run the following commands in the frontend directory in your terminal:
+    - npm install
+    - npm start (click yes if asks if you want to run on a different server)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then the site should pop open in the browser
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Or you can just go to the deployed site: https://travel-plannerr.netlify.app/
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This app was built with the create-react-app command. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
