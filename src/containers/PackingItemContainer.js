@@ -13,7 +13,10 @@ class PackingItemContainer extends React.Component {
                 <h2 className="title" >What to pack:</h2>
                 <PackingItems packingItems={this.props.trip && this.props.trip.packing_items} />
                 <br/><br/>
-                <PackingItemForm packingItems={this.props.trip && this.props.trip.packing_items} tripId={this.props.trip && this.props.trip.id} />
+                <PackingItemForm 
+                    packingItems={this.props.trip && this.props.trip.packing_items} 
+                    tripId={this.props.trip && this.props.trip.id} 
+                />
             </div>
         )       
     }

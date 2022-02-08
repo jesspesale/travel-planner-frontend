@@ -3,7 +3,6 @@ import ItineraryForm from "../componenets/ItineraryItems/ItineraryForm"
 import ItineraryItems from "../componenets/ItineraryItems/ItineraryItems"
 
 class ItineraryItemContainer extends React.Component {
-    // test
   
     checkTrip() {
         if(this.props.trip) {
@@ -13,7 +12,10 @@ class ItineraryItemContainer extends React.Component {
                     <h3 className="title" >Things to do in {this.props.trip.destination}:</h3>
                     <ItineraryItems itineraryItems={this.props.trip.itinerary_items} />
                     <br/><br/>
-                    <ItineraryForm itineraryItems={this.props.trip.itinerary_items} tripId={this.props.trip.id}/>
+                    <ItineraryForm 
+                        itineraryItems={this.props.trip.itinerary_items} 
+                        tripId={this.props.trip.id}
+                    />
                     <br/><br/>
                 </div>
             )
