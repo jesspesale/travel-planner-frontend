@@ -3,6 +3,7 @@ import ItineraryForm from "../componenets/ItineraryItems/ItineraryForm"
 import ItineraryItems from "../componenets/ItineraryItems/ItineraryItems"
 
 class ItineraryItemContainer extends React.Component {
+    // test
   
     checkTrip() {
         if(this.props.trip) {
